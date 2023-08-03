@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 0px 135px;
+
+  @media screen and (min-width: 1440px) {
+    width: 1440px;
+  }
+}

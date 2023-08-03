@@ -1,0 +1,95 @@
+@import "../../static/sass/mixins.scss";
+
+.section {
+  padding-top: 120px;
+}
+
+.title {
+  @include sectionTitle();
+}
+
+.topBox {
+  display: flex;
+
+  margin-top: 60px;
+}
+
+.thumb {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+
+  &:first-of-type {
+    margin-right: 30px;
+  }
+
+  &:hover .topHiddenBox {
+    top: 0px;
+  }
+}
+
+.topHiddenBox {
+  position: absolute;
+  top: 100%;
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 48px 78px;
+
+  background-color: #333333dd;
+
+  transition: top var(--transition-duration) ease-in-out;
+}
+.hiddenBox {
+  composes: topHiddenBox;
+
+  padding: 20px;
+  justify-content: center;
+
+  .hiddenBoxTitle {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+
+.bottomBox {
+  display: flex;
+
+  margin-top: 30px;
+}
+
+.bottomBoxThumb {
+  composes: thumb;
+
+  &:last-of-type {
+    margin-left: 30px;
+  }
+}
+
+.hiddenBoxTitle {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: white;
+}
+
+.button {
+  display: flex;
+
+  width: fit-content;
+
+  margin-top: 30px;
+  margin-left: auto;
+}

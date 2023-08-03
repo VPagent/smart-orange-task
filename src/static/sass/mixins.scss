@@ -1,0 +1,9 @@
+@mixin sectionTitle {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: var(--titles-font-color);
+}

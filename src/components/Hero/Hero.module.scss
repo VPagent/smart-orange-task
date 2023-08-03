@@ -1,0 +1,155 @@
+.heroSection {
+  padding-bottom: 90px;
+}
+
+.heroContentWrapper {
+  display: flex;
+}
+
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding-top: 336px;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  transform: translateY(-100px);
+  opacity: 0;
+
+  animation: textBoxAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+  transition: opacity 500ms ease-in-out transform 500ms ease-in-out;
+}
+
+.heroTitle {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: 0em;
+
+  color: var(--titles-font-color);
+}
+
+.heroTitleSpan {
+  text-transform: uppercase;
+  text-align: start;
+
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: var(--main-font-color);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+
+  margin-top: 90px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 53px;
+  height: 53px;
+
+  border: none;
+  background-color: var(--btn-bcg-color);
+
+  transition: background-color var(--transition-duration) ease-in-out;
+
+  &:disabled {
+    background-color: transparent;
+  }
+}
+
+.icon {
+  fill: var(--main-font-color);
+}
+
+.countBox {
+  display: flex;
+  align-items: center;
+
+  margin-top: 90px;
+
+  color: var(--countBox-font-color);
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.currNumber {
+  margin-right: 26px;
+}
+
+.allNumbers {
+  margin-left: 32px;
+}
+
+.rightBlock {
+  position: relative;
+  display: flex;
+  margin-left: auto;
+}
+
+.image {
+  opacity: 0;
+  animation: imageAnimation;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+  transition: opacity 500ms ease-in-out transform 500ms ease-in-out;
+}
+
+@keyframes imageAnimation {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes textBoxAnimation {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.imageLink {
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+}

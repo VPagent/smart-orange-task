@@ -1,0 +1,149 @@
+@import "../../static/sass/mixins.scss";
+
+.section {
+  padding: 120px 0px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  @include sectionTitle();
+}
+
+.formAndImageBox {
+  display: flex;
+
+  margin-top: 22px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 390px;
+}
+
+.label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &:not(:first-of-type) {
+    margin-top: 10px;
+  }
+}
+
+.input {
+  padding: 15px 20px;
+
+  border: none;
+
+  background-color: var(--input-bcg-color);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: var(--input-text-color);
+
+  transition: box-shadow var(--transition-duration) ease-in-out;
+
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+.input:focus + .placeholder {
+  opacity: 0;
+  top: 0px;
+}
+
+.input.filled ~ .placeholder {
+  opacity: 0;
+  top: 0px;
+}
+
+.placeholder {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+
+  color: var(--input-text-color);
+  transition: opacity var(--transition-duration) ease-in-out,
+    top var(--transition-duration) ease-in-out;
+}
+
+.redStar {
+  color: var(--redStar-color);
+}
+
+.textArea {
+  height: 148px;
+
+  padding: 15px 20px;
+
+  resize: none;
+  border: none;
+
+  background-color: var(--input-bcg-color);
+
+  transition: box-shadow var(--transition-duration) ease-in-out;
+
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+}
+
+.textArea:focus + .placeholder {
+  opacity: 0;
+  top: 0px;
+}
+
+.textArea.filled ~ .placeholder {
+  opacity: 0;
+  top: 0px;
+}
+
+.checkIcon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+}
+
+.image {
+  margin-left: 30px;
+
+  display: block;
+  width: fit-content;
+  height: auto;
+}
+
+.text {
+  max-width: 390px;
+  margin-left: 30px;
+  margin-top: 22px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.03em;
+  text-align: start;
+
+  color: var(--main-font-color);
+}
+
+.button {
+  margin-top: 22px;
+  display: flex;
+  margin-right: auto;
+}
